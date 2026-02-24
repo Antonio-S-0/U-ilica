@@ -1,23 +1,37 @@
-public class Pravokutnik {
+public class Pravokutnik extends GeometrijskiLik {
 
-    private String naziv = "Pravokutnik";
     private double a;
     private double b;
 
-    public Pravokutnik(double a, double b) {
+    public Pravokutnik(double a, double b, String naziv) {
+        super(naziv);
         this.a = a;
         this.b = b;
     }
 
-    public String getNaziv() {
-        return naziv;
+    public double getA() {
+        return a;
     }
 
-    public double izracunajPovrsinu() {
-        return a * b;
+    public void setA(double a) {
+        this.a = a;
     }
 
-    public double izracunajOpseg() {
+    public double getB() {
+        return b;
+    }
+
+    public void setB(double b) {
+        this.b = b;
+    }
+
+    @Override
+    public double opseg() {
         return 2 * (a + b);
+    }
+
+    @Override
+    public double povrsina() {
+        return a * b;
     }
 }

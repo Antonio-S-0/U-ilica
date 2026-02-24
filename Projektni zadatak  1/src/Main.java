@@ -1,47 +1,19 @@
-import java.util.Scanner;
-
 public class Main {
-
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+        Krug k = new Krug(10, "Krug1");
+        System.out.println("Naziv: " + k.getNaziv());
+        System.out.println("Opseg: " + k.opseg());
+        System.out.println("Povrsina: " + k.povrsina());
 
-        System.out.println("KRUG");
-        System.out.print("Radijus: ");
-        double r = sc.nextDouble();
-        Krug krug = new Krug(r);
+        Pravokutnik p = new Pravokutnik(4, 6, "Prav1");
+        System.out.println("\nNaziv: " + p.getNaziv());
+        System.out.println("Opseg: " + p.opseg());
+        System.out.println("Povrsina: " + p.povrsina());
 
-        System.out.println("Povrsina: " + krug.izracunajPovrsinu());
-        System.out.println("Opseg: " + krug.izracunajOpseg());
-
-        System.out.println("PRAVOKUTNIK");
-        System.out.print("Stranica a: ");
-        double a = sc.nextDouble();
-
-        System.out.print("Stranica b: ");
-        double b = sc.nextDouble();
-
-        Pravokutnik pravokutnik = new Pravokutnik(a, b);
-
-        System.out.println("Povrsina: " + pravokutnik.izracunajPovrsinu());
-        System.out.println("Opseg: " + pravokutnik.izracunajOpseg());
-
-
-        System.out.println("TROKUT");
-        System.out.print("Stranica a: ");
-        double t1 = sc.nextDouble();
-
-        System.out.print("Stranica b: ");
-        double t2 = sc.nextDouble();
-
-        System.out.print("Stranica c: ");
-        double t3 = sc.nextDouble();
-
-        Trokut trokut = new Trokut(t1, t2, t3);
-
-        System.out.println("Povrsina: " + trokut.izracunajPovrsinu());
-        System.out.println("Opseg: " + trokut.izracunajOpseg());
-
-        sc.close();
+        Trokut t = new Trokut(3, 4, 5, "Trokut1");
+        System.out.println("\nNaziv: " + t.getNaziv());
+        System.out.println("Opseg: " + t.opseg());
+        System.out.println("Povrsina: " + t.povrsina());
     }
 }
